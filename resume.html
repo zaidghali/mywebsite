@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Ghali Zaid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="https://www.linkedin.com/in/zaid-ghali/" class="linkedin-nav"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="resume-page">
+        <div class="resume-header">
+            <h1>Resume</h1>
+        </div>
+        <div class="resume-content">
+            <div class="resume-section">
+                <h2>About Me</h2>
+                <p class="about-text">Artificial intelligence engineering student and data science master's student seeking a 6-month internship in Data Science and Machine Learning starting in February-March 2025.</p>
+                <div class="contact-info">
+                    <div class="protected-info">
+                        <div class="info-item">
+                            <p>
+                                <i class="fas fa-phone"></i> 
+                                <span id="phone" class="protected-text">Click to reveal</span>
+                                <button onclick="showProtectedInfo('phone')" class="reveal-btn">
+                                    <i class="fas fa-lock"></i> Reveal
+                                </button>
+                            </p>
+                        </div>
+                        <div class="info-item">
+                            <p>
+                                <i class="fas fa-envelope"></i> 
+                                <span id="email" class="protected-text">Click to reveal</span>
+                                <button onclick="showProtectedInfo('email')" class="reveal-btn">
+                                    <i class="fas fa-lock"></i> Reveal
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <p><i class="fas fa-map-marker-alt"></i> Strasbourg, France</p>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2>Education</h2>
+                <div class="resume-item">
+                    <h3>Engineering Degree in Computer Science and Networks, Data Science and Artificial Intelligence</h3>
+                    <p class="institution">Télécom Physique Strasbourg</p>
+                    <p class="date">Sept 2022 - Sept 2025</p>
+                </div>
+                <div class="resume-item">
+                    <h3>Master's Degree in Data Science and Complex Systems</h3>
+                    <p class="institution">University of Strasbourg</p>
+                    <p class="date">Sept 2023 - Sept 2025</p>
+                </div>
+                <div class="resume-item">
+                    <h3>CPGE MPSI/MP*</h3>
+                    <p class="institution">CPGE Al-Zahraoui</p>
+                    <p class="date">Aug 2020 - Aug 2022</p>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2>Experience</h2>
+                <div class="resume-item">
+                    <h3>Hackathon Digital Future of Justice</h3>
+                    <p class="institution">Council of Europe - Bologna, Italy</p>
+                    <p class="date">September 2024 - November 2024</p>
+                    <ul class="experience-details">
+                        <li>Leveraged LLaMA and Sentence Transformer language models for legal case extraction and similarity analysis</li>
+                        <li>Employed multilingual embeddings and clustering algorithms to visualize similar cases</li>
+                        <li>Integrated RAG (Retrieval-Augmented Generation) to enhance contextual search precision</li>
+                    </ul>
+                </div>
+                <div class="resume-item">
+                    <h3>Data Scientist Intern</h3>
+                    <p class="institution">VTEC Lasers & Sensors Ltd - Eindhoven, Netherlands</p>
+                    <p class="date">May 2024 - August 2024</p>
+                    <ul class="experience-details">
+                        <li>Processed and analyzed time series data with Pandas, Numpy, and Matplotlib</li>
+                        <li>Modeled 'Mean Time To Failure' via exponential regression, achieving 0.9751 (train) and 0.9363 (test) precision</li>
+                        <li>Enhanced Random Forest model performance using scikit-learn and TensorFlow</li>
+                    </ul>
+                </div>
+                <div class="resume-item">
+                    <h3>Engineering Project (Deep Learning)</h3>
+                    <p class="institution">SEW USOCOME - Strasbourg, France</p>
+                    <p class="date">Jan 2024 - February 2025</p>
+                    <ul class="experience-details">
+                        <li>Developed and optimized YOLO, SSD, and Faster RCNN models for object detection</li>
+                        <li>Fine-tuned YOLO, ResNet models for box counting and classification with 90.69% accuracy</li>
+                    </ul>
+                </div>
+                <div class="resume-item">
+                    <h3>Full-Stack Developer Intern</h3>
+                    <p class="institution">LC Béton - Tétouan, Morocco</p>
+                    <p class="date">July 2023 - August 2023</p>
+                    <ul class="experience-details">
+                        <li>Developed a web application using Django, and designed a user interface in HTML, CSS, and JavaScript</li>
+                        <li>Integrated MySQL databases to facilitate data management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming and Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Matlab</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Power BI</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Natural Language Processing</span>
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Mathematics</span>
+                            <span class="skill-tag">Statistics</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Soft Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Intellectual Curiosity</span>
+                            <span class="skill-tag">Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2>Languages</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">English (Fluent)</span>
+                    <span class="skill-tag">French (Fluent)</span>
+                    <span class="skill-tag">Arabic (Fluent)</span>
+                    <span class="skill-tag">Spanish (Beginner)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/zaid-ghali/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2024 Ghali Zaid. All rights reserved.</p>
+    </footer>
+
+    <!-- Add this before the closing </body> tag -->
+    <script src="scripts.js"></script>
+</body>
+</html> 

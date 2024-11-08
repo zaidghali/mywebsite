@@ -1,0 +1,414 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.9);
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00ff88;
+}
+
+.nav-links .linkedin-nav {
+    font-size: 1.5rem;
+    color: #0077b5;
+    transition: color 0.3s ease;
+}
+
+.nav-links .linkedin-nav:hover {
+    color: #005582;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: white;
+}
+
+.welcome-text {
+    margin-bottom: 2rem;
+}
+
+.welcome-text h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    /* Fallback color in case gradient doesn't work */
+    color: #00ff88;
+    /* Gradient text effect with all vendor prefixes */
+    background: linear-gradient(45deg, #00ff88, #00a1ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 1s ease-out;
+}
+
+.welcome-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: #00ff88;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #00ff88, #00a1ff);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+/* Projects Section */
+.projects {
+    display: none;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    text-align: center;
+    background: #333;
+    color: white;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #00ff88;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Projects Page Styles */
+.projects-page {
+    min-height: 100vh;
+    padding: 120px 2rem 5rem;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: white;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.projects-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #00ff88, #00a1ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 1s ease-out;
+}
+
+.projects-header p {
+    font-size: 1.5rem;
+    color: #00ff88;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 136, 0.2);
+}
+
+.project-icon {
+    font-size: 3rem;
+    color: #00ff88;
+}
+
+.project-card h3 {
+    color: #00ff88;
+    margin: 1rem 0;
+}
+
+.project-description {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.project-link {
+    color: #00ff88;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #00a1ff;
+}
+
+/* Resume Page Styles */
+.resume-page {
+    min-height: 100vh;
+    padding: 120px 2rem 5rem;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: white;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.resume-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #00ff88, #00a1ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 1s ease-out;
+}
+
+.resume-content {
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.resume-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resume-section h2 {
+    color: #00ff88;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.resume-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resume-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.resume-item h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.institution {
+    color: #00a1ff;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category h3 {
+    color: #00a1ff;
+    margin-bottom: 1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.experience-details {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.experience-details li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.experience-details li::before {
+    content: "•";
+    color: #00ff88;
+    position: absolute;
+    left: 0;
+}
+
+/* Add to your existing styles */
+.protected-info {
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    margin-bottom: 0.5rem;
+}
+
+.protected-text {
+    color: #00ff88;
+    font-style: italic;
+    min-width: 120px;
+    display: inline-block;
+}
+
+.reveal-btn {
+    background: rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    color: #00ff88;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.reveal-btn:hover {
+    background: rgba(0, 255, 136, 0.3);
+    transform: translateY(-1px);
+}
+
+.reveal-btn i {
+    margin-right: 0.3rem;
+}
+
+#phone, #email {
+    display: inline-block;
+    min-width: 100px;
+}
