@@ -58,7 +58,11 @@ nav {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
 }
 
 .nav-links a:hover {
@@ -73,6 +77,26 @@ nav {
 
 .nav-links .linkedin-nav:hover {
     color: #005582;
+}
+
+/* Add this new style for active state */
+.nav-links a.active {
+    background: rgba(0, 255, 136, 0.05);
+    color: #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.nav-links a.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 30px;
+    animation: pulseGlow 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 /* Hero Section */
@@ -101,21 +125,21 @@ nav {
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .welcome-text h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     color: #ffffff;
-    animation: fadeInUp 1s ease-out 0.3s backwards;
+    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
 }
 
 .tagline {
     font-size: 1.5rem;
     color: #00ff88;
     margin-bottom: 2rem;
-    animation: fadeInUp 1s ease-out 0.6s backwards;
+    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.6s backwards;
 }
 
 .hero-buttons {
@@ -174,11 +198,26 @@ footer {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -404,20 +443,26 @@ footer {
 }
 
 .reveal-btn {
-    background: rgba(0, 255, 136, 0.2);
-    border: 1px solid rgba(0, 255, 136, 0.3);
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.2);
     color: #00ff88;
-    padding: 0.4rem 1rem;
-    border-radius: 15px;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
     cursor: pointer;
     margin-left: 1rem;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
 }
 
 .reveal-btn:hover {
-    background: rgba(0, 255, 136, 0.3);
-    transform: translateY(-1px);
+    background: rgba(0, 255, 136, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.15);
+}
+
+.reveal-btn:active {
+    transform: translateY(0);
 }
 
 .reveal-btn i {
