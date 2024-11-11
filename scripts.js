@@ -3,7 +3,7 @@ const PROTECTED_INFO = {
     email: 'ghalizaid1@gmail.com'
 };
 
-const PASSWORD = 'gh@liz@id';
+const PASSWORD = 'z@id';
 
 function showProtectedInfo(type) {
     const password = prompt('Please enter the password to view this information:');
